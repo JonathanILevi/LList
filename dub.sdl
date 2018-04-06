@@ -1,0 +1,6 @@
+name "llist"
+description "For a doubly and singly linked list."
+authors "Jonathan Levi"
+copyright "Copyright © 2018, Jonathan Levi"
+license "CC0"
+dependency "cst" version="~>1.0.4"
