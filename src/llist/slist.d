@@ -1,6 +1,6 @@
 
 
-module slist;
+module llist.slist;
 
 
 
