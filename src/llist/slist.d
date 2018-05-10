@@ -16,7 +16,7 @@ struct Node(T) {
 
 public {
 	@property bool empty(T)(Node!T* node) {
-		return (node.next is null);
+		return (node is null);
 	}
 }
 public {
@@ -37,11 +37,11 @@ public {
 		node.insertAfter(new Node!T(null, value));
 	}
 
-	void append(T)(Node!T* node, T value) {
-		assert(node.empty, "Can only append to the last node.  If you want to force this operation use `redirect`.");
-		node.payload	= value;
-		node.next	= new Node!T;
-	}
+	////void append(T)(Node!T* node, T value) {
+	////	assert(node.empty, "Can only append to the last node.  If you want to force this operation use `redirect`.");
+	////	node.payload	= value;
+	////	node.next	= new Node!T;
+	////}
 
 	void redirect(bool checkAtEnd=true, T)(Node!T* node, Node!T* newNode) {
 		node.next = newNode;
